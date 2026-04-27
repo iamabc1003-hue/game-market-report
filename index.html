@@ -17,7 +17,7 @@
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
       color: var(--ink);
       background: var(--paper);
       line-height: 1.6;
@@ -48,12 +48,19 @@
       margin: 0 0 16px;
       font-size: 1.15rem;
     }
-    .empty {
+    .report-list { display: grid; gap: 12px; padding: 0; margin: 0; list-style: none; }
+    .report-list a {
+      display: block;
       border: 1px solid var(--line);
       background: var(--panel);
-      padding: 20px;
+      padding: 18px 20px;
       border-radius: 8px;
+      color: var(--ink);
+      text-decoration: none;
     }
+    .report-list strong { display: block; font-size: 1.1rem; margin-bottom: 4px; }
+    .report-list span { color: var(--muted); }
+    .meta { margin-top: 34px; font-size: .92rem; }
     a { color: var(--accent); }
   </style>
 </head>
@@ -61,10 +68,20 @@
   <main>
     <h1>Game Market Reports</h1>
     <p>Monthly game market intelligence for studio leadership. Reports are generated as standalone HTML pages and published here for easy sharing.</p>
+
     <section>
       <h2>Reports</h2>
-      <div class="empty">The first monthly report will appear here after the scheduled automation runs.</div>
+      <ul class="report-list">
+        <li>
+          <a href="reports/2026-03/">
+            <strong>2026년 3월 게임시장 동향 리포트</strong>
+            <span>모바일 라이브 서비스, 저사양 슈터, Steam/PC 신작, AI와 조직 리스크</span>
+          </a>
+        </li>
+      </ul>
     </section>
+
+    <p class="meta">Next scheduled report: 2026년 5월 10일, covering 2026년 4월.</p>
   </main>
 </body>
 </html>
